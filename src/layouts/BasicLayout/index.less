@@ -1,0 +1,60 @@
+:global{
+    .g-layout{
+        overflow: hidden;
+        .logo{
+            font-family: 'Futura', 'Helvetica Neue For Number', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            span{
+                font-size: 26px;
+                color: #124266;
+            }
+            b{
+                font-weight: 400;
+                color: #2ea5ff;
+            }
+        }
+        .ant-layout{
+            .ant-layout-header{
+                position: relative;
+                background: #fff;
+                box-shadow: 0 2px 8px #f0f1f2;
+                z-index: 1;
+                ul{
+                    float: right;
+                }
+                .ant-menu{
+                    background: transparent;
+                }
+                .ant-menu-horizontal > .ant-menu-item-selected{
+                    border-top: 2px solid #1890ff;
+                    border-bottom: 2px solid transparent;
+                    transition: all 0.5s;
+                }
+                .ant-menu-item{
+                    border-bottom: 2px solid transparent;
+                    border-top: 2px solid transparent;
+                    height: 64px;
+                    line-height: 64px;
+                    &:hover{
+                        border-top: 2px solid #1890ff;
+                        border-bottom: 2px solid transparent;
+                    }
+                }
+                .ant-menu-horizontal{
+                    border: none;
+                }
+            }
+            .ant-layout-sider{
+                border-right: 1px solid #efefef;
+                background: #fff;
+            }
+            .ant-layout-content{
+                background: #fff;
+                height: 100%;
+                padding: 20px;
+            }
+            .ant-layout-footer{
+                background: #eee;
+            }
+        }
+    }
+}
