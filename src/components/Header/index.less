@@ -1,0 +1,43 @@
+.g-header{
+    padding: 0 50px;
+    height: 64px;
+    line-height: 64px;
+    position: relative;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 8px #f0f1f2;
+    box-shadow: 0 2px 8px #f0f1f2;
+    z-index: 1;
+    .logo{
+        font-family: 'Futura', 'Helvetica Neue For Number', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        span{
+            font-size: 26px;
+            color: #124266;
+        }
+        b{
+            font-weight: 400;
+            color: #2ea5ff;
+        }
+    }
+    ul{
+        float: right;
+        li{
+            float: left;
+            width: 60px;
+            text-align: center;
+            cursor: pointer;
+            border-top: 2px solid #fff;
+            transition: all 0.5s;
+            a{
+                display: block;
+            }
+            &:hover{
+                border-top: 2px solid #1890ff;
+                color: #1890ff;
+            }
+        }
+        .active{
+            border-top: 2px solid #1890ff;
+            color: #1890ff;
+        }
+    }
+}
