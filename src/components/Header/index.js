@@ -15,9 +15,9 @@ class Header extends PureComponent {
 		super();
 		this.state = {
 			list: [
-				{ name: "首页", url: "/" },
-				{ name: "组件", url: "/component" },
-				{ name: "工具", url: "/tool" }
+				{ name: "首页", url: "/", match: "/" },
+				{ name: "组件", url: "/component/index", match: "/component/" },
+				{ name: "工具", url: "/tool", match: "/tool" }
 			]
 		};
 	}
@@ -30,7 +30,7 @@ class Header extends PureComponent {
 			active = 0;
 		} else {
 			const obj = list.findIndex(item => {
-				if (item.url !== "/" && path.includes(item.url) === true) {
+				if (item.url !== "/" && path.includes(item.match) === true) {
 					return true;
 				}
 			});
@@ -49,6 +49,12 @@ class Header extends PureComponent {
 			type: "global/changeState",
 			payload: {
 				headerActive: active
+			}
+		});
+		dispatch({
+			type: "component/changeState",
+			payload: {
+				sideMenuActive: null
 			}
 		});
 	}

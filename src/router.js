@@ -11,23 +11,23 @@ const MyLoadingComponent = ({ isLoading, error }) => {
 	}
 };
 
-const AsyncHome = Loadable({
+const Home = Loadable({
 	loader: () => import("@/pages/Home"),
 	loading: MyLoadingComponent
 });
 
-const AsyncComponent = Loadable({
+const Component = Loadable({
 	loader: () => import("@/pages/Component"),
 	loading: MyLoadingComponent
 });
 
-const AsyncTool = Loadable({
+const Tool = Loadable({
 	loader: () => import("@/pages/Tool"),
 	loading: MyLoadingComponent
 });
 
 export const routes = [
-	{ path: "/", component: AsyncHome, exact: true },
-	{ path: "/component", component: AsyncComponent },
-	{ path: "/tool", component: AsyncTool }
+	{ path: "/", component: Home, exact: true },
+	{ path: "/component/:name", component: Component },
+	{ path: "/tool", component: Tool }
 ];
