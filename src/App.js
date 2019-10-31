@@ -20,12 +20,31 @@ window.dispatch = dispatch;
 
 class App extends React.Component {
 
+	constructor() {
+		super();
+		this.state = {
+			noHeaderPage: [
+				"/tool/markdown"
+			]
+		};
+	}
+
 	render() {
+		const { noHeaderPage } = this.state;
+		let isShowHeader = true;
+		const href = window.location.href;
+		noHeaderPage.forEach(item => {
+			if (href.includes(item)) isShowHeader = false;
+		});
+
 		return (
 			<Provider store={store}>
 				<BrowserRouter history={history}>
-					<Header />
-					<div className="g-body">
+					{
+						isShowHeader &&
+						<Header />
+					}
+					<div className={isShowHeader ? "g-body" : "g-body2"}>
 						<Switch>
 							{
 								routes.map(route => (

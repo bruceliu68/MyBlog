@@ -9,15 +9,36 @@ import React, { PureComponent } from "react";
 
 class Tool extends PureComponent {
 
+	constructor() {
+		super();
+		this.state = {
+			list: [
+				{ name: "在线MarkDown编辑", imgUrl: require("./img/mypic.jpeg"), url: "/tool/markdown" }
+			]
+		};
+	}
+
+	clickItem(item) {
+		const origin = window.location.origin;
+		window.open(`${origin}${item.url}`);
+	}
+
 	render() {
+		const { list } = this.state;
 
 		return (
 			<div className="g-tool">
 				<ul className="clearfix">
-					<li>
-						<img className="pic" src={require("./img/mypic.jpeg")} alt="" />
-						<p>在线MarkDown编辑</p>
-					</li>
+					{
+						list.map((item, index) => {
+							return (
+								<li key={index} onClick={() => this.clickItem(item)}>
+									<img className="pic" src={item.imgUrl} alt="" />
+									<p>{item.name}</p>
+								</li>
+							);
+						})
+					}
 				</ul>
 			</div>
 		);

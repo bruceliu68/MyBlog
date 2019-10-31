@@ -26,8 +26,14 @@ const Tool = Loadable({
 	loading: MyLoadingComponent
 });
 
+const MarkdownTool = Loadable({
+	loader: () => import("@/pages/Tool/MarkdownTool"),
+	loading: MyLoadingComponent
+});
+
 export const routes = [
 	{ path: "/", component: Home, exact: true },
 	{ path: "/component/:name", component: Component },
-	{ path: "/tool", component: Tool }
+	{ path: "/tool/index", component: Tool },
+	{ path: "/tool/markdown", component: MarkdownTool }
 ];

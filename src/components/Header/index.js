@@ -17,7 +17,7 @@ class Header extends PureComponent {
 			list: [
 				{ name: "首页", url: "/", match: "/" },
 				{ name: "组件", url: "/component/index", match: "/component/" },
-				{ name: "工具", url: "/tool", match: "/tool" }
+				{ name: "工具", url: "/tool/index", match: "/tool" }
 			]
 		};
 	}
