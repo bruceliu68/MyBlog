@@ -2,7 +2,7 @@ import "./index.less";
 import React, { PureComponent } from "react";
 import { Icon } from "antd";
 import MarkdownEditor from "@/components/MarkdownEditor";
-import ReactMarkdown from "react-markdown";
+import MarkdownRender from "@/components/MarkdownRender";
 
 class MarkdownTool extends PureComponent {
 	constructor() {
@@ -40,7 +40,7 @@ class MarkdownTool extends PureComponent {
 						/>
 					</div>
 					<div className="context">
-						<ReactMarkdown source={code} />
+						<MarkdownRender source={code} />
 					</div>
 				</div>
 			</div>
