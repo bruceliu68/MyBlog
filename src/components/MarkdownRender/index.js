@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import Marked from "marked";
 import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
-// import "./github.css";
 import "./index.less";
 
 class MarkdownRender extends PureComponent {
@@ -10,9 +9,9 @@ class MarkdownRender extends PureComponent {
 		super();
 		Marked.setOptions({
 			renderer: new Marked.Renderer(),
-			// highlight: function(code) {
-			// 	return hljs.highlightAuto(code).value;
-			// },
+			highlight: function(code) {
+				return hljs.highlightAuto(code).value;
+			},
 			baseUrl: null,
 			breaks: false,
 			gfm: true, // gfm风格

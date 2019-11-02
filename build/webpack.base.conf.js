@@ -18,7 +18,7 @@ module.exports = {
 	plugins: [
 		new webpack.DllReferencePlugin({
 			context: __dirname,
-			manifest: path.resolve(__dirname, `../public/${config.common.sourcePrefix}/vendor/vendor_manifest.json`)
+			manifest: path.resolve(__dirname, "../public/vendor/vendor_manifest.json")
 		}),
 		new webpack.DefinePlugin({
 			"process.env": JSON.stringify(process.env)
@@ -30,7 +30,7 @@ module.exports = {
 	],
 	output: {
 		path: config.build.assetsRoot,
-		filename: config.common.sourcePrefix + "/[name].[hash].js"
+		filename: "[name].[hash].js"
 	},
 	resolve: {
 		extensions: [".js", ".json"],

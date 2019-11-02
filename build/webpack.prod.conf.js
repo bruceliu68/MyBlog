@@ -14,7 +14,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = merge(baseWebpackConfig, {
 	mode: "production",
 	output: {
-		chunkFilename: config.common.sourcePrefix + "/[name].[chunkhash:8].js",
+		chunkFilename: "[name].[chunkhash:8].js",
 		publicPath: config.build.assetsPublicPath
 	},
 	devtool: config.build.devtool,
@@ -60,12 +60,12 @@ module.exports = merge(baseWebpackConfig, {
 		// }),
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			filename: config.common.sourcePrefix + "/index.html",
+			filename: "index.html",
 			template: config.common.htmlTemplatePath,	// 配置html模板的地址
 			chunksSortMode: "none"
 		}),
 		new MiniCssExtractPlugin({
-			filename: config.common.sourcePrefix + "/[name].[chunkhash:8].css"
+			filename: "[name].[chunkhash:8].css"
 		}),
 		new CopyPlugin([
 			{

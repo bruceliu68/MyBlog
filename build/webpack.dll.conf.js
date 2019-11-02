@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const config = require("./config");
-const outpath = `../public/${config.common.sourcePrefix}/vendor`;
+const outpath = "../public/vendor";
 
 const vendors = [
 	"react",

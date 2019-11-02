@@ -1,17 +1,14 @@
 const path = require("path");
 const assetsPublicPath = "/";
 const PORT = process.env.PORT || 8000;
-const sourcePrefix = "lb-resource";
-const publicPath = "/lb-resource/";
 
 module.exports = {
 	common: {
-		htmlTemplatePath: path.resolve(__dirname, "../src/index.html"),
-		sourcePrefix: sourcePrefix
+		htmlTemplatePath: path.resolve(__dirname, "../src/index.html")
 	},
 	dev: {
 		hot: true,
-		assetsSubDirectory: sourcePrefix + "/static",
+		assetsSubDirectory: "static",
 		assetsPublicPath,
 		// proxyTable: {
 		// 	"/creditApi": {
@@ -25,11 +22,11 @@ module.exports = {
 		port: PORT,
 		autoOpenBrowser: true,
 		devtool: "eval-source-map",
-		publicPath: publicPath
+		publicPath: assetsPublicPath
 	},
 	build: {
 		assetsRoot: path.resolve(__dirname, "../dist"),
-		assetsSubDirectory: sourcePrefix + "/static",
+		assetsSubDirectory: "static",
 		assetsPublicPath,
 		devtool: "source-map"
 	}
