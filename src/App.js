@@ -2,7 +2,7 @@ import "./index.less";
 import React from "react";
 import { init } from "@rematch/core";
 import * as models from "./models";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, Router, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
 import { routes } from "./router";
@@ -39,7 +39,7 @@ class App extends React.Component {
 
 		return (
 			<Provider store={store}>
-				<BrowserRouter history={history}>
+				<Router history={history}>
 					{
 						isShowHeader &&
 						<Header />
@@ -54,7 +54,7 @@ class App extends React.Component {
 							<Route component={Error} />
 						</Switch>
 					</div>
-				</BrowserRouter>
+				</Router>
 			</Provider>
 		);
 	}
