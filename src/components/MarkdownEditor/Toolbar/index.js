@@ -7,10 +7,29 @@ class Toolbar extends PureComponent {
 		super(props);
 		this.state = {
 			tags: [
+				{ name: "复制", value: "", icon: "biconfuzhi", flag: "copy" },
+				{ type: "vertical" },
 				{ name: "粗体", value: "****", icon: "biconcuti" },
 				{ name: "删除线", value: "~~~~", icon: "biconshanchuxian" },
 				{ name: "斜体", value: "**", icon: "biconxieti" },
-				{ type: "vertical" }
+				{ name: "引用", value: "> ", icon: "biconyinyong" },
+				{ type: "vertical" },
+				{ name: "标题1", value: "# ", icon: "biconh3" },
+				{ name: "标题2", value: "## ", icon: "biconh" },
+				{ name: "标题3", value: "### ", icon: "biconh1" },
+				{ name: "标题4", value: "#### ", icon: "biconh11" },
+				{ name: "标题5", value: "##### ", icon: "biconh2" },
+				{ name: "标题6", value: "###### ", icon: "biconh1-copy-copy-copy-copy" },
+				{ type: "vertical" },
+				{ name: "无需列表", value: "- ", icon: "biconwuxuliebiao" },
+				{ name: "有序列表", value: "1. ", icon: "biconyouxuliebiao" },
+				{ name: "横线", value: "------------", icon: "biconhengxian" },
+				{ type: "vertical" },
+				{ name: "链接", value: "", icon: "biconlianjie", flag: "link" },
+				{ name: "添加图片", value: "", icon: "bicontubiao02", flag: "pic" },
+				{ name: "行内代码", value: "``", icon: "bicondaima" },
+				{ name: "代码块", value: "", icon: "bicondaima1", flag: "code" },
+				{ name: "表格", value: "", icon: "biconbiaoge", flag: "table" }
 			]
 		};
 	}
