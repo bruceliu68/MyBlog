@@ -4,6 +4,7 @@ import "codemirror/mode/markdown/markdown";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "./index.less";
+import Toolbar from "./Toolbar";
 
 class MarkdownEditor extends PureComponent {
 	constructor(props) {
@@ -40,6 +41,7 @@ class MarkdownEditor extends PureComponent {
 		return (
 			<div className="m-markdown-editor">
 				<textarea ref={this.ref}></textarea>
+				<Toolbar />
 			</div>
 		);
 	}
