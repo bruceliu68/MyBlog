@@ -49,17 +49,21 @@ module.exports = {
 			},
 			{
 				test: /\.md$/,
-				use: [
-					{
-						loader: "html-loader"
-					},
-					{
-						loader: "markdown-loader",
-						options: {
-						}
-					}
-				]
+				loader: resolve("build/plugins/markdown-loader")
 			},
+			// {
+			// 	test: /\.md$/,
+			// 	use: [
+			// 		{
+			// 			loader: "html-loader"
+			// 		},
+			// 		{
+			// 			loader: "markdown-loader",
+			// 			options: {
+			// 			}
+			// 		}
+			// 	]
+			// },
 			{
 				test: /\.css$/,
 				use: [
