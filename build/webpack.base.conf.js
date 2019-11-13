@@ -48,6 +48,19 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.md$/,
+				use: [
+					{
+						loader: "html-loader"
+					},
+					{
+						loader: "markdown-loader",
+						options: {
+						}
+					}
+				]
+			},
+			{
 				test: /\.css$/,
 				use: [
 					devMode ? "style-loader" : MiniCssExtractPlugin.loader,
