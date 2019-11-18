@@ -1,4 +1,4 @@
-> ## TDS Components of React
+## TDS Components of React
 
 - 欢迎来到我的个人组件库，目前所有组件基于react开发。
 

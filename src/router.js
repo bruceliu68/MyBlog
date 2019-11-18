@@ -31,9 +31,15 @@ const MarkdownTool = Loadable({
 	loading: MyLoadingComponent
 });
 
+const JsonEditorTool = Loadable({
+	loader: () => import("@/pages/Tool/JsonEditorTool"),
+	loading: MyLoadingComponent
+});
+
 export const routes = [
 	{ path: "/", component: Home, exact: true },
 	{ path: "/component/:name", component: Component },
 	{ path: "/tool/index", component: Tool },
-	{ path: "/tool/markdown", component: MarkdownTool }
+	{ path: "/tool/markdown", component: MarkdownTool },
+	{ path: "/tool/jsonEditor", component: JsonEditorTool }
 ];

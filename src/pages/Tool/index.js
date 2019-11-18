@@ -13,7 +13,8 @@ class Tool extends PureComponent {
 		super();
 		this.state = {
 			list: [
-				{ name: "在线MarkDown编辑", imgUrl: require("./img/markdown.png"), url: "/tool/markdown" }
+				{ name: "在线MarkDown编辑", imgUrl: require("./img/markdown.png"), url: "/tool/markdown" },
+				{ name: "在线JSON编辑", imgUrl: require("./img/json.png"), url: "/tool/jsonEditor" }
 			]
 		};
 	}

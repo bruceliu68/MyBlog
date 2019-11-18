@@ -26,7 +26,8 @@ class App extends React.Component {
 		super();
 		this.state = {
 			noHeaderPage: [
-				"/tool/markdown"
+				"/tool/markdown",
+				"/tool/jsonEditor"
 			]
 		};
 	}

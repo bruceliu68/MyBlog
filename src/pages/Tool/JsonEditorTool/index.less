@@ -1,0 +1,64 @@
+.g-json-editor{
+    .header{
+        height: 60px;
+        box-shadow: 0px 0px 10px #ccc;
+        .goback{
+            display: inline-block;
+            margin: 20px 0 0 20px;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                color: #03A9F4;
+            }
+        }
+        .title{
+            margin-left: 30px;
+            font-size: 16px;
+        }
+    }
+    .body{
+        position: relative;
+        height: ~"calc(100vh - 60px)";
+        .editor{
+            float: left;
+            height: 100%;
+            width: 50%;
+            overflow: auto;
+            padding: 20px;
+        }
+        .context{
+            float: right;
+            height: 100%;
+            width: 50%;
+            overflow: auto;
+            padding: 20px;
+        }
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .anticon-caret-right, .anticon-caret-left{
+            position: absolute;
+            top: ~"calc(100vh / 2 - 70px)";
+            left: ~"calc(100vw / 2 - 10px)";
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .anticon-caret-left{
+            top: ~"calc(100vh / 2 - 40px)";
+        }
+        .anticon-download{
+            position: absolute;
+            right: 215px;
+            top: 29px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            z-index: 99;
+            opacity: 0.8;
+        }
+    }
+}
