@@ -21,6 +21,11 @@ const Component = Loadable({
 	loading: MyLoadingComponent
 });
 
+const Article = Loadable({
+	loader: () => import("@/pages/Article"),
+	loading: MyLoadingComponent
+});
+
 const Tool = Loadable({
 	loader: () => import("@/pages/Tool"),
 	loading: MyLoadingComponent
@@ -39,6 +44,7 @@ const JsonEditorTool = Loadable({
 export const routes = [
 	{ path: "/", component: Home, exact: true },
 	{ path: "/component/:name", component: Component },
+	{ path: "/article/:name", component: Article },
 	{ path: "/tool/index", component: Tool },
 	{ path: "/tool/markdown", component: MarkdownTool },
 	{ path: "/tool/jsonEditor", component: JsonEditorTool }
