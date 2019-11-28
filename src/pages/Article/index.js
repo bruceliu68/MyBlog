@@ -1,6 +1,7 @@
 import "./index.less";
 import React, { PureComponent } from "react";
-import { Tabs } from "antd";
+import { Tabs, Empty } from "antd";
+import MapJson from "./TableData";
 
 const { TabPane } = Tabs;
 
@@ -15,7 +16,7 @@ class Article extends PureComponent {
 				{ name: "Css", value: "css" },
 				{ name: "Html", value: "html" },
 				{ name: "Node", value: "node" },
-				{ name: "移动端", value: "moblie" },
+				{ name: "移动端", value: "mobile" },
 				{ name: "客户端", value: "client" },
 				{ name: "其他", value: "other" }
 			],
@@ -27,6 +28,10 @@ class Article extends PureComponent {
     	this.setState({ activeKey: key });
     }
 
+    handleClick(id) {
+    	console.log(id);
+    }
+
     render() {
     	const { list, activeKey } = this.state;
 
@@ -34,14 +39,33 @@ class Article extends PureComponent {
     		<div className="g-article">
     			<Tabs
     				size="small"
+    				animated={false}
     				activeKey={activeKey}
     				onChange={this.changeTabs}
     			>
     				{
     					list.map((item, index) => {
+    						const dataSource = MapJson[item.value];
     						return (
     							<TabPane tab={item.name} key={index}>
-    								{item.name}
+    								<ul>
+    									{
+    										dataSource &&
+                                            dataSource.length > 0 &&
+                                            dataSource.map((item, index) => {
+                                            	return (
+                                            		<li key={index} onClick={() => this.handleClick(item.id)}>
+                                            			{item.title}
+                                            		</li>
+                                            	);
+                                            })
+    									}
+    								</ul>
+    								{
+    									!dataSource ||
+                                        dataSource.length === 0 &&
+                                        <Empty />
+    								}
     							</TabPane>
     						);
     					})
