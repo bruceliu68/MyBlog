@@ -1,6 +1,6 @@
-function genID() {
-	return Number(Math.random().toString().substr(3, 8) + Date.now()).toString(36);
-}
+// function genID() {
+// 	return Number(Math.random().toString().substr(3, 8) + Date.now()).toString(36);
+// }
 
 const javascript = [
 	{ id: 1, title: "基本数据结构" },

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import JSONEditor from "jsoneditor/dist/jsoneditor.min.js";
+import JSONEditor from "jsoneditor";
 import "jsoneditor/dist/jsoneditor.min.css";
 import "./index.less";
 
@@ -35,19 +35,19 @@ class JsonEditor extends PureComponent {
 		this.jsoneditor.update(this.props.json);
 	}
 
-    onChange = () => {
-    	try {
-    		this.props.onChange(this.jsoneditor.get());
-    	} catch (e) {
-    		console.log(e);
-    	}
-    }
+	onChange = () => {
+		try {
+			this.props.onChange(this.jsoneditor.get());
+		} catch (e) {
+			console.log(e);
+		}
+	}
 
-    render() {
-    	return (
-    		<div className="jsoneditor-react-container" ref={this.ref}></div>
-    	);
-    }
+	render() {
+		return (
+			<div className="jsoneditor-react-container" ref={this.ref}></div>
+		);
+	}
 }
 
 export default JsonEditor;
