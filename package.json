@@ -58,7 +58,7 @@
     "codemirror": "^5.49.2",
     "highlight.js": "^9.15.10",
     "jsoneditor": "^7.2.1",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "qs": "^6.9.0",
     "react": "^16.11.0",
     "react-copy-to-clipboard": "^5.0.2",
